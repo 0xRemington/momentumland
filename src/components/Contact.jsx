@@ -15,8 +15,8 @@ export default function Contact() {
             <a href="mailto:hello@momentumland.co" className="contact-btn solid">
               hello@momentumland.co
             </a>
-            <a href="tel:+18305550142" className="contact-btn ghost">
-              (830) 555-0142
+            <a href="tel:+17095550142" className="contact-btn ghost">
+              (709) 555-0142
             </a>
           </div>
         </div>
@@ -25,7 +25,7 @@ export default function Contact() {
             <span className="footer-brand-name">Momentum</span>
             <span className="footer-brand-sub">Land Development</span>
           </div>
-          <div className="footer-addr">217 Main Street, Boerne, Texas 78006</div>
+          <div className="footer-addr">217 Water Street, St. John's, Newfoundland A1C 1A1</div>
           <div className="footer-copy">© 2026 Momentum Land Development, LLC</div>
         </div>
       </div>

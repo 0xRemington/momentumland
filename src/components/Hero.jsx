@@ -1,10 +1,14 @@
 import ImageSlot from './ImageSlot.jsx'
+import imgConstruction from '../../homeimages/housing-development-under-construction.webp'
+import imgTownhouse from '../../homeimages/onesto-contemporain-maisondeville-exterieur2-1-800x600.webp'
+import imgChalet from '../../homeimages/Panorama-2.0-Chalet-Moderne-Exterieur-V1-og-1.webp'
+import imgMultiunit from '../../homeimages/vinkel6-multilogement-exterieur-avant-og-800x600.webp'
 
-const stats = [
-  { num: <>2,400<span>+</span></>, label: 'Acres entitled & developed' },
-  { num: '18', label: 'Communities delivered' },
-  { num: '6,100', label: 'Homesites created' },
-  { num: '2009', label: 'Building communities since' },
+const cards = [
+  { id: 'c1', label: "Persimmon Ridge — St. John's", src: imgConstruction },
+  { id: 'c2', label: 'Cypress Bend — Mount Pearl', src: imgTownhouse },
+  { id: 'c3', label: 'Wheatfield Commons — Paradise', src: imgChalet },
+  { id: 'c4', label: "Harbourview Estates — St. John's", src: imgMultiunit },
 ]
 
 export default function Hero() {
@@ -21,7 +25,8 @@ export default function Hero() {
           </h1>
           <p className="hero-lead">
             Momentum acquires, entitles, and delivers master-planned neighborhoods
-            across the Texas Hill Country — disciplined and deliberate, from the
+            across St. John's, Mount Pearl, and Paradise, Newfoundland —
+            disciplined and deliberate, from the
             first survey stake to the final homesite.
           </p>
           <div className="hero-actions">
@@ -31,23 +36,20 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-media">
-          <ImageSlot
-            placeholder="Site work in progress"
-            radius={3}
-            style={{ display: 'block', width: '100%', height: 440 }}
-          />
-          <div className="hero-badge">Persimmon Ridge — Phase II underway</div>
+        <div className="hero-carousel" aria-label="Featured developments">
+          {cards.map((c) => (
+            <div key={c.id} className="hero-card">
+              <ImageSlot
+                src={c.src}
+                alt={c.label}
+                placeholder="House development"
+                radius={14}
+                style={{ display: 'block', width: '100%', height: '100%' }}
+              />
+              <div className="hero-badge">{c.label}</div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <div id="stats" className="stats">
-        {stats.map((s, i) => (
-          <div key={i}>
-            <div className="stat-num">{s.num}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
       </div>
     </header>
   )

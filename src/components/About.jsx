@@ -28,8 +28,8 @@ export default function About() {
               <div className="about-fact-sub">Acquisition to delivery</div>
             </div>
             <div>
-              <div className="about-fact-label">Hill Country rooted</div>
-              <div className="about-fact-sub">Central & South Texas</div>
+              <div className="about-fact-label">Newfoundland rooted</div>
+              <div className="about-fact-sub">St. John's, Mount Pearl & Paradise</div>
             </div>
           </div>
         </div>
