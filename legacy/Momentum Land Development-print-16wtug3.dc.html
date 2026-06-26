@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:#FAF6EE}
+    ::selection{background:#B05636;color:#FAF6EE}
+  </style>
+</helmet>
+<div style="background:#FAF6EE;color:#221D17;font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
+
+  <!-- NAV -->
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 48px;background:rgba(250,246,238,0.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(34,29,23,0.08)">
+    <a href="#top" style="text-decoration:none;color:#221D17;display:flex;align-items:baseline;gap:12px">
+      <span style="font-family:'Spectral',serif;font-weight:500;font-size:22px;letter-spacing:0.04em">Momentum</span>
+      <span style="font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#6F6557;font-weight:600">Land Development</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:40px">
+      <a href="#communities" style="text-decoration:none;color:#3A332A;font-size:14px;font-weight:500;letter-spacing:0.01em">Communities</a>
+      <a href="#approach" style="text-decoration:none;color:#3A332A;font-size:14px;font-weight:500;letter-spacing:0.01em">Approach</a>
+      <a href="#about" style="text-decoration:none;color:#3A332A;font-size:14px;font-weight:500;letter-spacing:0.01em">About</a>
+      <a href="#contact" style="text-decoration:none;color:#FAF6EE;background:#221D17;font-size:13px;font-weight:600;letter-spacing:0.02em;padding:11px 22px;border-radius:2px">Start a conversation</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" style="max-width:1280px;margin:0 auto;padding:104px 48px 0">
+    <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:end">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:34px">
+          <span style="width:34px;height:1px;background:#B05636"></span>
+          <span style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#B05636;font-weight:600">Master-planned residential communities</span>
+        </div>
+        <h1 style="font-family:'Spectral',serif;font-weight:300;font-size:68px;line-height:1.04;letter-spacing:-0.015em;color:#1C1812">Shaping raw land into <span style="font-style:italic;font-weight:400;color:#B05636">thriving</span> places to call home.</h1>
+        <p style="margin-top:30px;max-width:480px;font-size:17px;line-height:1.65;color:#5C5346;font-weight:400">Momentum acquires, entitles, and delivers master-planned neighborhoods across the Texas Hill Country — disciplined and deliberate, from the first survey stake to the final homesite.</p>
+        <div style="display:flex;align-items:center;gap:28px;margin-top:40px">
+          <a href="#communities" style="text-decoration:none;color:#FAF6EE;background:#B05636;font-size:14px;font-weight:600;letter-spacing:0.02em;padding:15px 30px;border-radius:2px">View our communities</a>
+          <a href="#approach" style="text-decoration:none;color:#1C1812;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:9px">Our approach <span style="color:#B05636">→</span></a>
+        </div>
+      </div>
+      <div style="position:relative">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-tall" shape="rounded" radius="3" placeholder="Site work in progress" style="display:block;width:100%;height:440px" hint-size="100%,440px"></x-import>
+        <div style="position:absolute;left:18px;bottom:18px;background:rgba(28,24,18,0.78);backdrop-filter:blur(6px);color:#FAF6EE;font-size:12px;font-weight:500;letter-spacing:0.02em;padding:9px 15px;border-radius:2px">Persimmon Ridge — Phase II underway</div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div id="stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:96px;padding:48px 0;border-top:1px solid rgba(34,29,23,0.14);border-bottom:1px solid rgba(34,29,23,0.14)">
+      <div>
+        <div style="font-family:'Spectral',serif;font-weight:300;font-size:54px;line-height:1;color:#1C1812">2,400<span style="color:#B05636">+</span></div>
+        <div style="margin-top:12px;font-size:13px;letter-spacing:0.04em;color:#6F6557;font-weight:500">Acres entitled & developed</div>
+      </div>
+      <div>
+        <div style="font-family:'Spectral',serif;font-weight:300;font-size:54px;line-height:1;color:#1C1812">18</div>
+        <div style="margin-top:12px;font-size:13px;letter-spacing:0.04em;color:#6F6557;font-weight:500">Communities delivered</div>
+      </div>
+      <div>
+        <div style="font-family:'Spectral',serif;font-weight:300;font-size:54px;line-height:1;color:#1C1812">6,100</div>
+        <div style="margin-top:12px;font-size:13px;letter-spacing:0.04em;color:#6F6557;font-weight:500">Homesites created</div>
+      </div>
+      <div>
+        <div style="font-family:'Spectral',serif;font-weight:300;font-size:54px;line-height:1;color:#1C1812">2009</div>
+        <div style="margin-top:12px;font-size:13px;letter-spacing:0.04em;color:#6F6557;font-weight:500">Building communities since</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED COMMUNITIES -->
+  <section id="communities" style="max-width:1280px;margin:0 auto;padding:108px 48px 0">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#B05636;font-weight:600;margin-bottom:18px">Selected communities</div>
+        <h2 style="font-family:'Spectral',serif;font-weight:300;font-size:44px;line-height:1.08;letter-spacing:-0.01em;color:#1C1812;max-width:620px">Neighborhoods we've planned, graded, and brought to life.</h2>
+      </div>
+      <a href="#contact" style="text-decoration:none;color:#1C1812;font-size:14px;font-weight:600;display:none;align-items:center;gap:9px;white-space:nowrap">All projects <span style="color:#B05636">→</span></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <article>
+        <div style="position:relative">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="proj-1" shape="rounded" radius="3" placeholder="Community photo" style="display:block;width:100%;height:300px" hint-size="100%,300px"></x-import>
+          <span style="position:absolute;top:14px;left:14px;background:#FAF6EE;color:#3A6B4A;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:6px 11px;border-radius:2px">Selling</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif;font-weight:400;font-size:24px;color:#1C1812;margin-top:22px">Persimmon Ridge</h3>
+        <div style="margin-top:8px;font-size:14px;color:#6F6557;font-weight:500;display:flex;gap:14px"><span>Boerne, TX</span><span style="color:#C9BCA6">/</span><span>142 homesites</span></div>
+        <p style="margin-top:14px;font-size:14.5px;line-height:1.6;color:#5C5346">A hill-country enclave of one-acre estate lots wrapped around protected oak groves and a shared trail network.</p>
+      </article>
+      <article>
+        <div style="position:relative">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="proj-2" shape="rounded" radius="3" placeholder="Community photo" style="display:block;width:100%;height:300px" hint-size="100%,300px"></x-import>
+          <span style="position:absolute;top:14px;left:14px;background:#FAF6EE;color:#B05636;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:6px 11px;border-radius:2px">In development</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif;font-weight:400;font-size:24px;color:#1C1812;margin-top:22px">Cypress Bend</h3>
+        <div style="margin-top:8px;font-size:14px;color:#6F6557;font-weight:500;display:flex;gap:14px"><span>New Braunfels, TX</span><span style="color:#C9BCA6">/</span><span>318 homesites</span></div>
+        <p style="margin-top:14px;font-size:14.5px;line-height:1.6;color:#5C5346">A master-planned community along the Guadalupe corridor, with greenbelt frontage and walkable village density.</p>
+      </article>
+      <article>
+        <div style="position:relative">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="proj-3" shape="rounded" radius="3" placeholder="Community photo" style="display:block;width:100%;height:300px" hint-size="100%,300px"></x-import>
+          <span style="position:absolute;top:14px;left:14px;background:#FAF6EE;color:#6F6557;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:6px 11px;border-radius:2px">Delivered</span>
+        </div>
+        <h3 style="font-family:'Spectral',serif;font-weight:400;font-size:24px;color:#1C1812;margin-top:22px">Wheatfield Commons</h3>
+        <div style="margin-top:8px;font-size:14px;color:#6F6557;font-weight:500;display:flex;gap:14px"><span>Fredericksburg, TX</span><span style="color:#C9BCA6">/</span><span>96 homesites</span></div>
+        <p style="margin-top:14px;font-size:14.5px;line-height:1.6;color:#5C5346">A completed cottage-lot neighborhood centered on a restored prairie park, fully sold within eighteen months.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- APPROACH / PROCESS -->
+  <section id="approach" style="margin-top:120px;background:#ECE3D3">
+    <div style="max-width:1280px;margin:0 auto;padding:104px 48px">
+      <div style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:72px;align-items:start">
+        <div style="position:sticky;top:108px">
+          <div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#B05636;font-weight:600;margin-bottom:18px">How we work</div>
+          <h2 style="font-family:'Spectral',serif;font-weight:300;font-size:44px;line-height:1.1;letter-spacing:-0.01em;color:#1C1812">A disciplined path from acreage to address.</h2>
+          <p style="margin-top:24px;font-size:16px;line-height:1.7;color:#5C5346;max-width:380px">Every community moves through the same deliberate sequence. It's how we protect timelines, capital, and the character of the land.</p>
+        </div>
+        <div>
+          <div style="display:flex;gap:30px;padding:34px 0;border-top:1px solid rgba(34,29,23,0.16)">
+            <div style="font-family:'Spectral',serif;font-weight:300;font-size:24px;color:#B05636;min-width:44px">01</div>
+            <div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:23px;color:#1C1812">Acquisition</h3>
+              <p style="margin-top:10px;font-size:15px;line-height:1.65;color:#5C5346;max-width:460px">We source and underwrite raw land with a clear thesis — location, water, topography, and a market that's ready for it.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:30px;padding:34px 0;border-top:1px solid rgba(34,29,23,0.16)">
+            <div style="font-family:'Spectral',serif;font-weight:300;font-size:24px;color:#B05636;min-width:44px">02</div>
+            <div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:23px;color:#1C1812">Entitlement & planning</h3>
+              <p style="margin-top:10px;font-size:15px;line-height:1.65;color:#5C5346;max-width:460px">Zoning, utilities, and engineering come together into a plat that honors the site and the community around it.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:30px;padding:34px 0;border-top:1px solid rgba(34,29,23,0.16)">
+            <div style="font-family:'Spectral',serif;font-weight:300;font-size:24px;color:#B05636;min-width:44px">03</div>
+            <div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:23px;color:#1C1812">Horizontal development</h3>
+              <p style="margin-top:10px;font-size:15px;line-height:1.65;color:#5C5346;max-width:460px">Roads, drainage, and infrastructure go in the ground — managed in-house to hold quality and schedule.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:30px;padding:34px 0;border-top:1px solid rgba(34,29,23,0.16);border-bottom:1px solid rgba(34,29,23,0.16)">
+            <div style="font-family:'Spectral',serif;font-weight:300;font-size:24px;color:#B05636;min-width:44px">04</div>
+            <div>
+              <h3 style="font-family:'Spectral',serif;font-weight:500;font-size:23px;color:#1C1812">Community delivery</h3>
+              <p style="margin-top:10px;font-size:15px;line-height:1.65;color:#5C5346;max-width:460px">Finished homesites move to builders and homeowners, with amenities and stewardship that endure past the sale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="max-width:1280px;margin:0 auto;padding:112px 48px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-img" shape="rounded" radius="3" placeholder="Team or site photo" style="display:block;width:100%;height:480px" hint-size="100%,480px"></x-import>
+      <div>
+        <div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#B05636;font-weight:600;margin-bottom:20px">Who we are</div>
+        <h2 style="font-family:'Spectral',serif;font-weight:300;font-size:40px;line-height:1.14;letter-spacing:-0.01em;color:#1C1812">Land is patient. We're precise.</h2>
+        <p style="margin-top:26px;font-size:16.5px;line-height:1.72;color:#5C5346">Momentum Land Development is a family of planners, engineers, and operators who've spent fifteen years turning overlooked acreage into the kind of neighborhoods people are proud to live in. We hold our projects from acquisition through delivery — no handoffs, no shortcuts.</p>
+        <p style="margin-top:18px;font-size:16.5px;line-height:1.72;color:#5C5346">We believe good development respects the land it sits on. That conviction shapes every plat we draw and every lot we sell.</p>
+        <div style="display:flex;gap:48px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(34,29,23,0.14)">
+          <div>
+            <div style="font-family:'Spectral',serif;font-weight:400;font-size:17px;color:#1C1812">Held in-house</div>
+            <div style="margin-top:6px;font-size:13.5px;color:#6F6557">Acquisition to delivery</div>
+          </div>
+          <div>
+            <div style="font-family:'Spectral',serif;font-weight:400;font-size:17px;color:#1C1812">Hill Country rooted</div>
+            <div style="margin-top:6px;font-size:13.5px;color:#6F6557">Central & South Texas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" style="background:#1C1812;color:#FAF6EE">
+    <div style="max-width:1280px;margin:0 auto;padding:104px 48px">
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:end">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:#D98A66;font-weight:600;margin-bottom:24px">Let's talk land</div>
+          <h2 style="font-family:'Spectral',serif;font-weight:300;font-size:56px;line-height:1.06;letter-spacing:-0.015em;color:#FAF6EE">Have acreage, or a community in mind?</h2>
+          <p style="margin-top:24px;font-size:17px;line-height:1.65;color:#C7BCA9;max-width:460px">Whether you're a landowner, a broker, or a builder, we'd like to hear what you're working on.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+          <a href="mailto:hello@momentumland.co" style="text-decoration:none;color:#1C1812;background:#FAF6EE;font-size:15px;font-weight:600;letter-spacing:0.01em;padding:16px 32px;border-radius:2px;width:100%;text-align:center">hello@momentumland.co</a>
+          <a href="tel:+18305550142" style="text-decoration:none;color:#FAF6EE;border:1px solid rgba(250,246,238,0.3);font-size:15px;font-weight:600;letter-spacing:0.01em;padding:16px 32px;border-radius:2px;width:100%;text-align:center">(830) 555-0142</a>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:84px;padding-top:32px;border-top:1px solid rgba(250,246,238,0.16);flex-wrap:wrap;gap:20px">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <span style="font-family:'Spectral',serif;font-weight:500;font-size:19px;letter-spacing:0.04em;color:#FAF6EE">Momentum</span>
+          <span style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#9C8F7C;font-weight:600">Land Development</span>
+        </div>
+        <div style="font-size:13.5px;color:#9C8F7C">217 Main Street, Boerne, Texas 78006</div>
+        <div style="font-size:13px;color:#7E7362">© 2026 Momentum Land Development, LLC</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Momentum Land Development";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…}. Decks own their own @page.
+  var __m = null;
+  try { __m = (() => {
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false } };
+  }
+
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage };
+
+  if (paperPage) {
+    return { kind: 'paper-doc', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    if (authoredPx(el, 'width')) break;
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: ≥2 visible non-fixed children, each with authored px width
+  // AND height, all within ±2px of each other. Off unless the page opts in
+  // via data-om-multi-frame on the stop element — guards against card grids
+  // and pricing tables that match the geometry but aren't separate canvases.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var cands = [];
+    for (var k = 0; k < el.children.length; k++) {
+      var ch = el.children[k];
+      var cs; try { cs = getComputedStyle(ch); } catch (e) { continue; }
+      if (cs.display === 'none' || cs.visibility === 'hidden' || cs.position === 'fixed') continue;
+      var rc = rectOf(ch);
+      if (rc.width < 2 || rc.height < 2) continue;
+      if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+      cands.push(rc);
+    }
+    if (cands.length >= 2) {
+      var w0 = cands[0].width, h0 = cands[0].height, ok = true;
+      for (var q = 1; q < cands.length; q++)
+        if (Math.abs(cands[q].width - w0) > 2 || Math.abs(cands[q].height - h0) > 2) ok = false;
+      if (ok) return { kind: 'multi-frame', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  return { kind: 'single-canvas', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: authoredPx(el, 'width'), height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (__m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + f.width + 'px ' + f.height +
+        'px;margin:0}html,body,[data-om-frame-wrap]{padding:0!important;' +
+        'margin:0!important;background:none!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
